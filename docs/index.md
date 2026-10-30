@@ -37,4 +37,5 @@ All the code lives in the `engine/` folder of the [repo](https://github.com/sank
 
 - [Thoughts: the notes garden](https://sankarsh98.github.io/garden/)
 - [AI Systems](https://sankarsh98.github.io/ai-systems/): agents, MCP and inference efficiency
+- [The AI Course](https://sankarsh98.github.io/ai-course/): 32 modules from foundations to frontier topics
 - [All sites](https://sankarsh98.github.io/)
