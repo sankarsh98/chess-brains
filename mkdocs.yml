@@ -1,0 +1,45 @@
+site_name: How Computers Play Chess
+site_description: A hands-on mini-course, from move generation to neural networks.
+site_url: https://sankarsh98.github.io/chess-brains/
+repo_url: https://github.com/sankarsh98/chess-brains
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - scheme: slate
+      primary: indigo
+      toggle: {icon: material/weather-sunny, name: Light mode}
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+    - toc.follow
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - toc:
+      permalink: true
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - Home: index.md
+  - The course:
+      - 1. Boards and moves: 01-boards-and-moves.md
+      - 2. Judging a position: 02-evaluation.md
+      - 3. Looking ahead: 03-minimax.md
+      - 4. Pruning the tree: 04-alpha-beta.md
+      - 5. Modern engines: 05-modern-engines.md
+      - 6. LLMs and chess: 06-llms-and-chess.md
+  - Exercises: exercises.md
