@@ -1,4 +1,6 @@
-# Exercises
+---
+title: "Exercises"
+---
 
 Roughly in order of difficulty.
 
@@ -21,5 +23,5 @@ Roughly in order of difficulty.
 9. Build the **LLM coach** from part 6 for your own games.
 10. Train a tiny evaluation network: generate positions from random games, label them with Stockfish at depth 8, and fit a small PyTorch MLP. Compare it with the hand-written evaluation.
 
-!!! success "Where this leads"
-    Exercise 10 is the core of how NNUE works. Once you've done it, you understand the main idea behind modern engines.
+> [!success] Where this leads
+> Exercise 10 is the core of how NNUE works. Once you've done it, you understand the main idea behind modern engines.

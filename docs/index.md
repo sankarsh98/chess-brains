@@ -1,4 +1,6 @@
-# How Computers Play Chess
+---
+title: "How Computers Play Chess"
+---
 
 A short, hands-on course. You will build a tiny chess engine in about 70 lines of Python, then see how it connects to Stockfish, AlphaZero and large language models.
 
@@ -30,8 +32,8 @@ uv venv && uv pip install chess
 
 All the code lives in the `engine/` folder of the [repo](https://github.com/sankarsh98/chess-brains). Run each script as you read.
 
-!!! tip "How to use this course"
-    Don't just read. Each part ends with a small experiment. Change a number, predict what happens, then run it.
+> [!tip] How to use this course
+> Don't just read. Each part ends with a small experiment. Change a number, predict what happens, then run it.
 
 ## More from this series
 

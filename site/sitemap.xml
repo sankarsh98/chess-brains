@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/01-boards-and-moves/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/02-evaluation/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/03-minimax/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/04-alpha-beta/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/05-modern-engines/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/06-llms-and-chess/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://sankarsh98.github.io/chess-brains/exercises/</loc>
+         <lastmod>2026-10-30</lastmod>
+    </url>
+</urlset>

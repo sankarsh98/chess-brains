@@ -1,4 +1,6 @@
-# 1. Boards and moves
+---
+title: "1. Boards and moves"
+---
 
 ## Representing a position
 
@@ -20,8 +22,8 @@ Serious engines store each piece type as a **64-bit integer**, one bit per squar
 
 Moving every pawn forward one square is a single shift: `pawns << 8`. Checking which squares a rook attacks uses lookup tables and bit tricks. This is why engines search millions of positions per second.
 
-!!! info "Why 64 bits?"
-    A chessboard has 64 squares, so a 64-bit word covers it exactly. CPUs operate on whole words in one instruction, so you process all 64 squares at once.
+> [!info] Why 64 bits?
+> A chessboard has 64 squares, so a 64-bit word covers it exactly. CPUs operate on whole words in one instruction, so you process all 64 squares at once.
 
 ## Generating moves
 
@@ -41,7 +43,24 @@ for move in board.legal_moves:
 **Perft** counts every leaf position reachable in exactly *n* moves. The right answers are well known, so any bug in move generation shows up as a wrong number.
 
 ```python
---8<-- "engine/perft.py"
+"""Perft: count leaf positions at a given depth. A classic move-generator test."""
+import chess
+
+
+def perft(board: chess.Board, depth: int) -> int:
+    if depth == 0:
+        return 1
+    total = 0
+    for move in board.legal_moves:
+        board.push(move)
+        total += perft(board, depth - 1)
+        board.pop()
+    return total
+
+
+if __name__ == "__main__":
+    for d in range(1, 5):
+        print(d, perft(chess.Board(), d))
 ```
 
 Output:
@@ -56,5 +75,5 @@ Output:
 
 The count grows by about 20-30x per ply. That growth is the central problem of computer chess.
 
-!!! question "Experiment"
-    Run perft from the position after `1. e4`. Predict the depth-1 count first. Then try the position `r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1` (famous as "Kiwipete") and look up its known counts online.
+> [!question] Experiment
+> Run perft from the position after `1. e4`. Predict the depth-1 count first. Then try the position `r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1` (famous as "Kiwipete") and look up its known counts online.

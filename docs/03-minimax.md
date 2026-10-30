@@ -1,4 +1,6 @@
-# 3. Looking ahead: minimax
+---
+title: "3. Looking ahead: minimax"
+---
 
 ## The idea
 
@@ -25,7 +27,16 @@ Each recursion flips the sign. No separate max and min branches.
 ## Plain minimax in code
 
 ```python
---8<-- "engine/compare_search.py:minimax"
+def minimax_nodes(board, depth):
+    if depth == 0 or board.is_game_over():
+        return evaluate(board), 1
+    best, nodes = -MATE - 1, 1
+    for move in board.legal_moves:
+        board.push(move)
+        score, n = minimax_nodes(board, depth - 1)
+        board.pop()
+        best, nodes = max(best, -score), nodes + n
+    return best, nodes
 ```
 
 ## The problem: explosion
@@ -41,5 +52,5 @@ With about 30 legal moves per position, looking *d* plies ahead visits roughly $
 
 Our plain minimax measured **775,804 nodes at depth 4**. That's about what the formula predicts, and far too slow to go deeper.
 
-!!! question "Experiment"
-    Run `compare_search.py` at depth 5. How long does plain minimax take compared with depth 4? That ratio is your *effective branching factor*.
+> [!question] Experiment
+> Run `compare_search.py` at depth 5. How long does plain minimax take compared with depth 4? That ratio is your *effective branching factor*.

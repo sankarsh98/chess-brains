@@ -1,4 +1,6 @@
-# 5. Modern engines
+---
+title: "5. Modern engines"
+---
 
 ## Stockfish: search plus a small neural net
 
@@ -33,8 +35,8 @@ Instead of searching every move to a fixed depth, MCTS repeatedly walks down the
 - **Policy head:** "which moves look worth considering?" This replaces move ordering.
 - **Value head:** "who's winning?" This replaces the hand-written evaluation.
 
-!!! info "Pattern worth noticing"
-    Both engines pair a search with a learned estimate. The difference is how much weight each side carries. Stockfish leans on brute-force search with a small net, while Leela leans on a big net with a lean search. The same trade-off shows up across modern AI.
+> [!info] Pattern worth noticing
+> Both engines pair a search with a learned estimate. The difference is how much weight each side carries. Stockfish leans on brute-force search with a small net, while Leela leans on a big net with a lean search. The same trade-off shows up across modern AI.
 
 ## Strength today
 

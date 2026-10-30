@@ -1,4 +1,6 @@
-# 6. LLMs and chess
+---
+title: "6. LLMs and chess"
+---
 
 ## Can a language model play chess?
 
@@ -53,5 +55,5 @@ for move in game.mainline_moves():
     print(board.fullmove_number, move, before, "->", after)
 ```
 
-!!! tip
-    You need the Stockfish binary installed (`sudo apt install stockfish`) for the snippet above. Check the path with `which stockfish`.
+> [!tip]
+> You need the Stockfish binary installed (`sudo apt install stockfish`) for the snippet above. Check the path with `which stockfish`.
