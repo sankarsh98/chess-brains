@@ -32,3 +32,9 @@ All the code lives in the `engine/` folder of the [repo](https://github.com/sank
 
 !!! tip "How to use this course"
     Don't just read. Each part ends with a small experiment. Change a number, predict what happens, then run it.
+
+## More from this series
+
+- [Thoughts: the notes garden](https://sankarsh98.github.io/garden/)
+- [AI Systems](https://sankarsh98.github.io/ai-systems/): agents, MCP and inference efficiency
+- [All sites](https://sankarsh98.github.io/)
